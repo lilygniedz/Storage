@@ -1,0 +1,148 @@
+//Lily Gniedziejko's App
+//Event driven code starts here
+//When imgBook is clicked, your screen will change to scnExit, where txtBookClub is hidden
+onEvent("imgBook", "click", function( ) {
+  setScreen("scnExit");
+  hideElement("txtBookClub");
+  console.log("imgBook has been clicked");
+});
+//When imgWave is clicked, your screen will change to scnHome
+onEvent("imgWave", "click", function( ) {
+  setScreen("scnHome");
+  console.log("imgWave has been clicked");
+});
+//If btnRecommend is clicked, the screen will change to scnRecommendation, where all of the text is hidden
+onEvent("btnRecommend", "click", function( ) {
+  setScreen("scnRecommendation");
+  hideElement("txtFantasy");
+  hideElement("txtNonfiction");
+  hideElement("txtClassic");
+  hideElement("txtScienceFiction");
+  console.log("btnRecommend has been clicked");
+});
+//When btnFantasy is clicked, txtFantasy will be shown and Hedwig's Theme will play
+onEvent("btnFantasy", "click", function( ) {
+  showElement("txtFantasy");
+  playSound("onlymp3.to---Harry-Potter-Ringtone--harry-potter-soundtrack-VgeOVEXtwjA-192k-1655191618952.mp3", true);
+  console.log("");
+});
+//If txtFantasy is clicked, Hedwig's theme will stop playing, and txtFantasy will be hidden
+onEvent("txtFantasy", "click", function( ) {
+  hideElement("txtFantasy");
+  stopSound("onlymp3.to---Harry-Potter-Ringtone--harry-potter-soundtrack-VgeOVEXtwjA-192k-1655191618952.mp3");
+  console.log("txtFantasy has been clicked");
+});
+//When btnNonfiction is clicked, txtNonfiction will be shown
+onEvent("btnNonfiction", "click", function( ) {
+  showElement("txtNonfiction");
+  console.log("btnNonfiction was clicked");
+});
+//When txtNonfiction is clicked, txtNonfiction will be hidden
+onEvent("txtNonfiction", "click", function( ) {
+  hideElement("txtNonfiction");
+  console.log("txtNonfiction was clicked");
+});
+//When btnClassic is clicked, txtClassic will be shown
+onEvent("btnClassic", "click", function( ) {
+  showElement("txtClassic");
+  console.log("btnClassic was clicked");
+});
+//When txtClassic is clicked, txtClassic will be hidden
+onEvent("txtClassic", "click", function( ) {
+  hideElement("txtClassic");
+  console.log("txtClassic was clicked");
+});
+//when btnScienceFiction is clicked, txtScienceFiction will be shown
+onEvent("btnScienceFiction", "click", function( ) {
+  showElement("txtScienceFiction");
+  console.log("btnScienceFiction was clicked");
+});
+//when txtScienceFiction is clicked, txtScienceFiction will be hidden
+onEvent("txtScienceFiction", "click", function( ) {
+  hideElement("txtScienceFiction");
+  console.log("txtScienceFiction was clicked");
+});
+//If imgQuiz is clicked, your screen will change to scnQuiz
+onEvent("imgQuiz", "click", function( ) {
+  setScreen("scnQuiz");
+  console.log("imgQuiz was clicked");
+});
+//if radio button radFantasy is clicked, your screen will change to scnFantasy
+onEvent("radFantasy", "click", function( ) {
+  setScreen("scnFantasy");
+  console.log("radFantasy was clicked");
+});
+//if mouse is moved over imgIcon, your icon color property will change to red for imgIcon 
+onEvent("imgIcon", "mouseover", function( ) {
+  setProperty("imgIcon", "icon-color", "red");
+  console.log("mouse has moved over imgIcon");
+});
+//if mouse moves over imgFantasy, imgFantasy moves to a random location
+onEvent("imgFantasy", "mouseover", function( ) {
+  setPosition("imgFantasy", randomNumber(1, 10), randomNumber(1, 10), 100, 100);
+  console.log("mouse has moved over imgFantasy");
+});
+//if imgFantasy is clicked, the screen changes to scnHome
+onEvent("imgFantasy", "click", function( ) {
+  setScreen("scnHome");
+  console.log("imgFantasy was clicked");
+});
+//when radio button radNonfiction is clicked, the screen changes to scnNonfiction
+onEvent("radNonfiction", "click", function( ) {
+  setScreen("scnNonfiction");
+  console.log("radNonfiction was clicked");
+});
+//when clicked, radClassic activates scnClassic to be set
+onEvent("radClassics", "click", function( ) {
+  setScreen("scnClassic");
+  console.log("radClassics");
+});
+//when radScienceFiction is clicked, scnScienceFiction is set as the screen
+onEvent("radScienceFiction", "click", function( ) {
+  setScreen("scnScienceFiction");
+  console.log("radScienceFiction was clicked");
+});
+//when imgBookk is clicked, the screen is set to scnHome
+onEvent("imgBookk", "click", function( ) {
+  setScreen("scnHome");
+  console.log("imgBookk was clicked");
+});
+//If imgScienceFiction is clicked, scnHome is set as the screen
+onEvent("imgScienceFiction", "click", function( ) {
+  setScreen("scnHome");
+  console.log("imgScienceFiction has been clicked");
+});
+//when imgClassic is clicked, scnHome is set as the screen
+onEvent("imgClassic", "click", function( ) {
+  setScreen("scnHome");
+  console.log("imgClassic has been clicked");
+});
+//when btnHome is clicked, scnHome is set as the screen
+onEvent("btnHome", "click", function( ) {
+  setScreen("scnHome");
+  console.log("btnHome has been clicked");
+});
+//if btnHom is clicked, scnHome is set as the screen
+onEvent("btnHom", "click", function( ) {
+  setScreen("scnHome");
+  console.log("btnHome has been clicked");
+});
+//btnContact makes txtBookClub show when clicked
+onEvent("btnContact", "click", function( ) {
+  showElement("txtBookClub");
+  console.log("btnContact has been clicked");
+});
+//if txtBook club is clicked, txtBookClub goes away
+onEvent("txtBookClub", "click", function( ) {
+  hideElement("txtBookClub");
+  console.log("txtBookClub has been clicked");
+});
+//imgBook on scnHome came from https://www.adazing.com
+//background for scnHome came from https://encrypted-tbn0.gstatic.com 
+//background for scnExit came from https://www.miltonandking.com
+//imgWave on scnExit came from https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Emoji_u1f44b.svg/2048px-Emoji_u1f44b.svg.png
+//imgClassic on scnClassic came from https://upload.wikimedia.org
+//imgFantasy on scnFantasy came from https://freepngimg.com
+//imgQuiz on scnQuiz came from https://cdn-icons-png.flaticon.com
+//imgScienceFiction on scnScienceFiction came from https://openclipart.org 
+//the imgBookk and imgIcon icons came from code.org
